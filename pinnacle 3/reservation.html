@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Table - Delish Dine</title>
+  <link rel="stylesheet" href="styleee.css">
+  <script>
+    function handleReservation(event) {
+      event.preventDefault(); // Prevent page reload
+      alert("✅ Reservation Successful!");
+      document.getElementById("reservation-form").reset(); // Clear form
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Book a Table</h1>
+    <a href="PinnacleLab5.html">Back to Home</a>
+  </header>
+
+  <main>
+    <form id="reservation-form" onsubmit="handleReservation(event)">
+      <label>Name:</label>
+      <input type="text" required><br>
+
+      <label>Date:</label>
+      <input type="date" required><br>
+
+      <label>Time:</label>
+      <input type="time" required><br>
+
+      <label>Guests:</label>
+      <input type="number" min="1" max="20" required><br>
+
+      <button type="submit">Reserve</button>
+    </form>
+  </main>
+</body>
+</html>
